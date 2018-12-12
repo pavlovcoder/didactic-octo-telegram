@@ -1,13 +1,13 @@
 print(
   '-----------------------------------------\n'\
-  'Practical python education || Exercise-11:\n'\
+  'Practical python education || Exercise-12:\n'\
   '-----------------------------------------\n'
   )
 
 print(
   'Task:\n'\
   '-----------------------------------------\n'\
-  'Write a Python program to print the documents (syntax, description etc.) of Python built-in function(s).\n'
+  'Write a Python program to print the calendar of a given month and year.\n'
   )
 
 print(
@@ -15,7 +15,10 @@ print(
   '-----------------------------------------'\
   )
 
-print("abs() - ", abs.__doc__)
+import calendar
+y = int(input("Input the year :"))
+m = int(input("Input the month :"))
+print(calendar.month(y, m))
 
 print(
   '\n-----------------------------------------\n'\

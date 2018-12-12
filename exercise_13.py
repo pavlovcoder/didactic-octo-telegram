@@ -1,13 +1,13 @@
 print(
   '-----------------------------------------\n'\
-  'Practical python education || Exercise-11:\n'\
+  'Practical python education || Exercise-13:\n'\
   '-----------------------------------------\n'
   )
 
 print(
   'Task:\n'\
   '-----------------------------------------\n'\
-  'Write a Python program to print the documents (syntax, description etc.) of Python built-in function(s).\n'
+  'Write a Python program to print the following here document.\n'
   )
 
 print(
@@ -15,7 +15,12 @@ print(
   '-----------------------------------------'\
   )
 
-print("abs() - ", abs.__doc__)
+print("""
+a string that you "don't" have to escape
+This
+is a ........ multi-line
+heredoc string -----------> example
+""")
 
 print(
   '\n-----------------------------------------\n'\
