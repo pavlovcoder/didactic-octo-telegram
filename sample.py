@@ -1,5 +1,6 @@
-from datetime import date
-f_date = date(2014, 7, 2)
-l_date = date(2014, 7, 11)
-delta = l_date - f_date
-print(delta.days)
+def near_thousand(n):
+      return ((abs(1000 - n) <= 100) or (abs(2000 - n) <= 100))
+print(near_thousand(1000))
+print(near_thousand(900))
+print(near_thousand(800))   
+print(near_thousand(2200))
