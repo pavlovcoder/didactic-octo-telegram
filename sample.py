@@ -1,12 +1,7 @@
-def is_group_member(group_data, n):
-    for value in group_data:
-        if n == value:
-            return True
-    return False
-print(is_group_member([1, 5, 8, 3], 3))
-print(is_group_member([5, 8, 3], -1))
+def concatenate_list_data(list):
+    result= ''
+    for element in list:
+        result += str(element)
+    return result
 
-while True:
-  stuff()
-  if fail_condition:
-    break
+print(concatenate_list_data([1, 5, 12, 2]))
