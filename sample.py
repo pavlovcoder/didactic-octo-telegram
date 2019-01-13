@@ -1,7 +1,5 @@
-def concatenate_list_data(list):
-    result= ''
-    for element in list:
-        result += str(element)
-    return result
+color_list_1 = set(["White", "Black", "Red"])
+color_list_2 = set(["Red", "Green"])
 
-print(concatenate_list_data([1, 5, 12, 2]))
+print(color_list_1.difference(color_list_2))
+

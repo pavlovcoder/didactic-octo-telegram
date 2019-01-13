@@ -62,6 +62,6 @@ while again_exec:
 
 print(
   '\n-----------------------------------------\n'\
-  'Copyright 2018 Vladimir Pavlov. All Rights Reserved.\n'\
+  'Copyright 2019 Vladimir Pavlov. All Rights Reserved.\n'\
   '-----------------------------------------'
   )
