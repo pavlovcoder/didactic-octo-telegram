@@ -1,5 +1,20 @@
-color_list_1 = set(["White", "Black", "Red"])
-color_list_2 = set(["Red", "Green"])
+x = 15
+y = 4
 
-print(color_list_1.difference(color_list_2))
+# Output: x + y = 19
+print('x + y =',x+y)
 
+# Output: x - y = 11
+print('x - y =',x-y)
+
+# Output: x * y = 60
+print('x * y =',x*y)
+
+# Output: x / y = 3.75
+print('x / y =',x/y)
+
+# Output: x // y = 3
+print('x // y =',x//y)
+
+# Output: x ** y = 50625
+print('x ** y =',x**y)
