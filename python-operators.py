@@ -18,6 +18,7 @@ print(
 #Default function for handling execution loop:
 def execution_loop():
   data = input("Do you want to try again ? Enter [y] - for continue / [n] - for quit : ")
+  print("You entered a command: ", data)
   if data == "y":
     return True
   elif data == "n":

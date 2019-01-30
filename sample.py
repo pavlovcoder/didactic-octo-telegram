@@ -18,3 +18,7 @@ print('x // y =',x//y)
 
 # Output: x ** y = 50625
 print('x ** y =',x**y)
+
+try: input = raw_input
+except NameError: pass
+print("Hi " + input("Say something: "))
