@@ -48,6 +48,22 @@ def comparison_func(x, y):
   comparator = x > y
   command = 'greater_than'
   print(comparison_string_func(command, comparator, x, y, 1))
+  comparator = x < y
+  command = 'less_than'
+  print(comparison_string_func(command, comparator, x, y, 2))
+  comparator = x == y
+  command = 'equal_to'
+  print(comparison_string_func(command, comparator, x, y, 3))
+  comparator = x != y
+  command = 'not_equal_to'
+  print(comparison_string_func(command, comparator, x, y, 4))
+  comparator = x >= y
+  command = 'greater_equal'
+  print(comparison_string_func(command, comparator, x, y, 5))
+  comparator = x <= y
+  command = 'less_equal'
+  print(comparison_string_func(command, comparator, x, y, 6))
+  print('\n')
 
 def comparison_string_func(operation, comparator, x, y, index):
   message = {
