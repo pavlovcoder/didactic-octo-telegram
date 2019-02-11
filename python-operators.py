@@ -20,10 +20,10 @@ comparison_counter = 0
 
 #Default function for handling execution loop:
 def execution_loop():
-  data = input("Do you want to try again ? Enter [y] - for continue / [n] - for quit : ")
-  if data == "y":
+  data = input("Do you want to try again ? Enter [1] - for continue / [0] - for quit : ")
+  if data == 1:
     return True
-  elif data == "n":
+  elif data == 0:
     return False
   else:
     print("Error: your entered incorrect command. Please, try again...")
@@ -31,16 +31,22 @@ def execution_loop():
 
 #Function for testing all available arithmetic operators on the Python:
 def arithmetic_func(x, y):
-    print('\nArithmetic operations for operands:\n')
-    print(f'{x} + {y} = {x+y}')
-    print(f'{x} - {y} = {x-y}')
+    print('\nArithmetic operations')
+    print('{0} + {1} = {2}'.format(x, y, x+y))
+    #print(f'{x} - {y} = {x-y}')
+    print('{0} - {1} = {2}'.format(x, y, x-y))
     if (y == 0):
-      print(f'You cannot divide {x} by zero.')
+      #print(f'You cannot divide {x} by zero.')
+      print('You cannot divide {0} by zerp.'.format(x))
     else:
-      print(f'{x} / {y} = {x/y}')
-      print(f'{x} // {y} = {x//y}')
-    print(f'{x} * {y} = {x*y}')
-    print(f'{x} ^ {y} = {x**y}')
+      #print(f'{x} / {y} = {x/y}')
+      #print(f'{x} // {y} = {x//y}')
+      print('{0} / {1} = {2}'.format(x, y, x/y))
+      print('{0} // {1} = {2}'.format(x, y, x//y))
+    #print(f'{x} * {y} = {x*y}')
+    #print(f'{x} ^ {y} = {x**y}')
+    print('{0} * {1} = {2}'.format(x, y, x*y))
+    print('{0} ** {1} = {2}'.format(x, y, x**y))
 
 #Function for testing all available comparison operators on the Python:
 def comparison_func(x, y):
@@ -74,7 +80,8 @@ def comparison_string_func(operation, comparator, x, y, index):
     'greater_equal': 'is greater or equal to' if comparator else 'is not greater or equal to',
     'less_equal': 'is less or equal to' if comparator else 'is not less or equal to'
   }[operation]
-  output = f'{index}. Operand {x} {message} {y}.'
+  #output = f'{index}. Operand {x} {message} {y}.'
+  output = '{0}. Operand {1} {2} {3}'.format(index, x, message, y)
   return output
 
 #Default parameter for handling execution loop:
