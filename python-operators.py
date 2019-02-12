@@ -31,7 +31,7 @@ def execution_loop():
 
 #Function for testing all available arithmetic operators on the Python:
 def arithmetic_func(x, y):
-    print('\nArithmetic operations')
+    print('\nArithmetic operations\n')
     print('{0} + {1} = {2}'.format(x, y, x+y))
     #print(f'{x} - {y} = {x-y}')
     print('{0} - {1} = {2}'.format(x, y, x-y))
@@ -69,7 +69,48 @@ def comparison_func(x, y):
   comparator = x <= y
   command = 'less_equal'
   print(comparison_string_func(command, comparator, x, y, 6))
-  print('\n')
+
+#Function for testing logical operators on the Python:
+def logical_func():
+  print('\nLogical operations for operands:')
+  x = boolean_input(1)
+  print('You entered operand: {0}'.format(x))
+  y = boolean_input(2)
+  print('You entered operand: {0}\n'.format(y))
+  comparator = x and y
+  command = 'and'
+  print(logical_string_func(command, comparator, 1))
+  comparator = x or y
+  command = 'or'
+  print(logical_string_func(command, comparator, 2))
+  comparator = not x
+  command = 'not'
+  print(logical_string_func(command, comparator, 3))
+  comparator = not y
+  command = 'not'
+  print(logical_string_func(command, comparator, 4))
+
+
+def boolean_input(index):
+  print('\nPlease, enter your {0}-operand with only values: True [1] / False [0]:'.format(index))
+  user_input = int(input('>>> '))
+  if user_input == 1:
+    return True
+  elif user_input == 0:
+    return False
+  else:
+    print('Error: "{0}" entered operand is not equal to "1" or "0"... Please try again...'.format(user_input))
+    return boolean_input(index)
+
+def logical_string_func(operation, comparator, index):
+  message = {
+    'and': 'Two operands are True' if comparator else 'One operand is not True',
+    'or': 'One or two operands are True' if comparator else 'All operands are not True',
+    'not': 'Operand is True' if comparator else 'Operand is False'
+  }[operation]
+  output = '{0}. {1}'.format(index, message)
+  return output
+  
 
 def comparison_string_func(operation, comparator, x, y, index):
   message = {
@@ -95,6 +136,7 @@ while again_exec:
   y = float(input('y = '))
   arithmetic_func(x, y)
   comparison_func(x, y)
+  logical_func()
   counter_exec = counter_exec + 1
   again_exec = execution_loop()
 
