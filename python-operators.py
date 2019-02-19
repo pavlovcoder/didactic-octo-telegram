@@ -90,6 +90,38 @@ def logical_func():
   command = 'not'
   print(logical_string_func(command, comparator, 4))
 
+#Function for bitwise operators on the Python:
+def bitwise_func():
+  print('\nBitwise operations for operands:\n')
+  print('Please, enter your 1-operand integer')
+  x = int(input('>>> '))
+  print('Please, enter your 2-operant integer')
+  y = int(input('>>> '))
+  print('Your entered integers on the 8-bit binary representation:')
+  print('{0}: {0:08b}'.format(x, x))
+  print('{0}: {0:08b}'.format(y, y))
+  print('\nResults of bitwise operations:\n')
+  print('{0} AND {1} = {2} : {2:08b}'.format(x, y, x & y, ))
+  print('{0} OR {1} = {2} : {2:08b}'.format(x, y, x | y))
+  print('{0} XOR {1} = {2} : {2:08b}'.format(x, y, x ^ y))
+  print('{0} NOT = {1} : {1:08b}'.format(x, ~x))
+  print('{0} NOT = {1} : {1:08b}'.format(y, ~y))
+  print('{0} >> 3 = {1} : {1:08b}'.format(x, x >> 3))
+  print('{0} >> 2 = {1} : {1:08b}'.format(y, y >> 2))
+  print('{0} << 6 = {1} : {1:08b}'.format(x, x << 6))
+  print('{0} << 3 = {1} : {1:08b}'.format(y, y << 3))
+
+#Function for assignment operators on the Python:
+def assignment_func():
+  print('\nAssigment operations for operands:\n')
+  print('Please, enter your 1-operand integer')
+  x = int(input('>>> '))
+  print('Please, enter your 2-operand integer')
+  y = int(input('>>> '))
+  print('{0} = {0} + {1} = {2}'.format(x, y, x += y))
+  print('{0} = {0} - {1} = {2}'.format(x, y, x -= y))
+  print('{0} = {0} * {1} = {2}'.format(x, y, x *= y))
+
 
 def boolean_input(index):
   print('\nPlease, enter your {0}-operand with only values: True [1] / False [0]:'.format(index))
@@ -137,6 +169,8 @@ while again_exec:
   arithmetic_func(x, y)
   comparison_func(x, y)
   logical_func()
+  bitwise_func()
+  assignemnt_func()
   counter_exec = counter_exec + 1
   again_exec = execution_loop()
 
