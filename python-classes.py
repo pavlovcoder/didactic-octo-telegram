@@ -17,7 +17,6 @@ print(
 
 #Default function for handling execution loop:
 def execution_loop():
-  #data = input("Do you want to try again ? Enter [y] - for continue / [n] - for quit : ")
   data = int(input("Do you want to try again ? Enter [1] - for continue / [0] - for quit :"))
   if data == 1:
     return True
@@ -29,7 +28,7 @@ def execution_loop():
 
 #Function for testing definition of function outside of the class:
 def fl(self, x, y):
-    return min(x, x+Y)
+    return min(x, x+y)
 
 class C:
     f = fl
@@ -37,16 +36,29 @@ class C:
         return 'I\'m a function "g".'
     h = g
 
+#Function for testing iterators:
+def iterators_func():
+  print('Iterators fucntion was called:')
+  print('Testing for loop statement with iterators:')
+  for element in [1, 2, 3]:
+    print(element)
+  for element in (4, 5, 6):
+    print(element)
+  for key in {'one': 1, 'two': 2, 'three': 3}:
+    print(key)
+  for char in "789":
+    print(char)
+  for line in open("./python-classes.txt"):
+    print(line, end='')
+  
+
 #Default parameter for handling execution loop:
 again_exec = True
 counter_exec = 0
 
 #Default loop for handling execution:
 while again_exec:
-  first_instance = new C()
-  print(first_instance.f())
-  print(first_instance.g())
-  print(first_instance.h())
+  iterators_func()
   again_exec = execution_loop()
   counter_exec = counter_exec + 1
 
