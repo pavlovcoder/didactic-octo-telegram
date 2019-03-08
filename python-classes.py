@@ -36,6 +36,21 @@ class C:
         return 'I\'m a function "g".'
     h = g
 
+#Initializing a new Reverse class:
+class Reverse:
+  def __init__(self, data):
+    self.data = data
+    self.index = len(data)
+
+  def __iter__(self):
+    return self
+
+  def __next__(self): 
+    if self.index == 0:
+      raise StopIteration
+    self.index = self.index - 1
+    return self.data[self.index]
+
 #Function for testing iterators:
 def iterators_func():
   print('Iterators fucntion was called:')
@@ -50,7 +65,22 @@ def iterators_func():
     print(char)
   for line in open("./python-classes.txt"):
     print(line, end='')
-  
+
+  print('\nLooping over a backward sequence:\n')
+
+  test_string = 'vr player'
+  it = iter(test_string)
+  print(it)
+  print(next(it))
+  print(next(it))
+  print(next(it))
+
+  print('\nDisplaying a backward sequence:\n')
+  rev = Reverse('spam')
+  iter(rev)
+  for char in rev:
+    print(char)
+
 
 #Default parameter for handling execution loop:
 again_exec = True

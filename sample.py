@@ -1,11 +1,10 @@
-# Function defined outside the class
-def f1(self, x, y):
-    return min(x, x+y)
-
-class C:
-    f = f1
-
-    def g(self):
-        return 'hello world'
-
-    h = g
+for element in [1, 2, 3]:
+    print(element)
+for element in (1, 2, 3):
+    print(element)
+for key in {'one':1, 'two':2}:
+    print(key)
+for char in "123":
+    print(char)
+for line in open("myfile.txt"):
+    print(line, end='')
