@@ -62,6 +62,7 @@ def comparison_func(x, y):
   print(comparison_string_func(command, comparator, x, y, 3))
   comparator = x != y
   command = 'not_equal_to'
+  command = 'not_equal_to'
   print(comparison_string_func(command, comparator, x, y, 4))
   comparator = x >= y
   command = 'greater_equal'
